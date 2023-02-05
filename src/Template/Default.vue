@@ -9,7 +9,7 @@
       <OrganismHeader />
       <div id="content" />
       <slot />
-      <footer class="bg-lab-navy">
+      <!-- <footer class="bg-lab-navy">
         <div
           class="flex flex-col items-center justify-between border-t py-6 px-8 text-xs text-white sm:flex-row xl:px-12"
         >
@@ -37,7 +37,7 @@
             />
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </div>
 </template>

@@ -281,8 +281,8 @@
           v-for="card in faq"
           :key="card.title"
           type="button"
-          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 text-center font-title text-4xl font-bold hover:bg-a-green xl:text-5xl 3xl:text-7xl"
-          :class="{ 'bg-a-green': activeFaq === card.title }"
+          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 font-title text-3xl font-bold hover:bg-a-green xl:text-3xl"
+          :class="{ 'bg-a-yellow': activeFaq === card.title }"
           @click="activeFaq = card.title"
         >
           <div class="w-full">{{ card.title }}</div>
@@ -295,11 +295,11 @@
           v-for="(card, cardName) in faq"
           :id="`ongaku-${cardName}`"
           :key="cardName"
-          class="absolute top-0"
+          class="absolute top-10"
         >
           <div
             v-show="card.title === activeFaq"
-            class="textSmall prose !text-white"
+            class="textMedium prose !text-white"
           >
             <div class="" v-html="card.description" />
           </div>
@@ -322,25 +322,29 @@ export default {
       selectedPortfolio: '',
       popup: false,
       activeSound: 'false',
-      activeFaq: 'Lorem ipsumesometsama2',
+      activeFaq:
+        'Lorem ipsumesometsama Lorem ipsumes ometsama Lorem ipsumesometsama',
       activeMusic: 'First one ipsum',
       faq: [
         {
-          title: 'Lorem ipsumesometsama',
+          title:
+            'Lorem ipsumesometsama Lorem ipsumes ometsama Lorem ipsumesometsama',
           description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
           aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
            deserunt?`,
         },
         {
-          title: 'Lorem ipsumesometsama2',
+          title:
+            'Lorem ipsumesometsama Lorem ipsumesome tsama Lorem ipsumesometsama2',
           description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
           aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
            deserunt?`,
         },
         {
-          title: 'Lorem ipsumesometsama3',
+          title:
+            'Lorem ipsumesometsama Lorem ipsum esome tsama Lorem ipsumesometsama3',
           description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
           aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
