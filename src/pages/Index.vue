@@ -1,7 +1,7 @@
 <template>
   <TemplateDefault class="relative z-10 bg-a-yellow text-white" homepage>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] grid-cols-2"
+      class="relative grid h-screen min-h-[1000px] pt-24 md:grid-cols-2 md:pt-0"
       full-width
     >
       <div
@@ -102,7 +102,10 @@
         Your browser does not support the audio element.
       </audio>
     </div> -->
-    <div class="relative grid h-screen min-h-[1000px] grid-cols-2" full-width>
+    <div
+      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
+      full-width
+    >
       <div
         class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 text-a-charcoal xl:px-12 3xl:space-y-10"
       >
@@ -162,7 +165,7 @@
       </div>
     </div>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] grid-cols-2"
+      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
@@ -170,7 +173,7 @@
       >
         <AtomAnimate
           type="button"
-          class="textXLarge font-title font-bold text-a-green"
+          class="textXLarge pb-12 font-title font-bold text-a-green"
         >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quaerat
           officiis expedita cum aliquam iste ducimus.
@@ -179,7 +182,7 @@
       <div
         class="relative flex h-full w-full flex-col justify-center space-y-10 bg-a-green p-10"
       >
-        <div class="grid w-10/12 grid-cols-2 gap-10">
+        <div class="grid gap-10 md:w-10/12 md:grid-cols-2">
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
@@ -201,7 +204,7 @@
             </kinesis-element>
           </kinesis-container>
         </div>
-        <div class="grid w-10/12 grid-cols-2 gap-10 self-end">
+        <div class="grid gap-10 self-end md:w-10/12 md:grid-cols-2">
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
@@ -224,7 +227,7 @@
           </kinesis-container>
         </div>
 
-        <div class="grid w-10/12 grid-cols-2 gap-10">
+        <div class="grid gap-10 md:w-10/12 md:grid-cols-2">
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
@@ -246,7 +249,7 @@
             </kinesis-element>
           </kinesis-container>
         </div>
-        <div class="hidden w-10/12 grid-cols-2 gap-10 self-end 3xl:grid">
+        <div class="hidden w-10/12 gap-10 self-end md:grid-cols-2 3xl:grid">
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
@@ -271,7 +274,7 @@
       </div>
     </AtomSection>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] grid-cols-2"
+      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
