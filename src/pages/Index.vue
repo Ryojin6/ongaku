@@ -46,7 +46,7 @@
               )
             "
             type="button"
-            class="custom-transition absolute right-0 top-40 z-20 h-24 w-6/12 -translate-y-0 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
+            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 -translate-y-0 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
           />
           <button
             @click.prevent="
@@ -55,7 +55,7 @@
               )
             "
             type="button"
-            class="custom-transition absolute right-0 top-96 z-20 h-24 w-6/12 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
+            class="custom-transition absolute right-0 top-1/2 z-20 h-24 w-6/12 translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
           />
           <button
             @click.prevent="
@@ -276,7 +276,7 @@
           v-for="card in faq"
           :key="card.title"
           type="button"
-          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 font-title text-3xl font-semibold hover:bg-a-green xl:text-3xl"
+          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-6 pt-4 font-title text-3xl font-semibold hover:bg-a-green xl:text-3xl"
           :class="{ 'bg-a-yellow': activeFaq === card.title }"
           @click="activeFaq = card.title"
         >
@@ -322,39 +322,49 @@ export default {
       selectedMusic: '/m1.mp3',
       faq: [
         {
-          title: 'Will there be a whitelist?',
-          description: `Yes, there will be a whitelist. We will make sure that people 
-          can guarantee their mint spot by showing their love and conviction for the project.
+          title: 'Inspiration',
+          description: `The vision of Ongaku was to create an environment which not only
+          brings artists of Asia together, but also provide a space where holders can
+          explore their creative mind`,
+        },
+        {
+          title: 'Music',
+          description: `Each NFT will have music behind the animation which will be
+          customizable to holders. In an effort to diversify the sound of Ongaku we've
+          reached out to artists all over Asia each with their own unique style. Ranging
+          from K-Pop music to Techno music.*`,
+        },
+        {
+          title: 'Customization',
+          description: `
+          <p>*Each Ongaku can be hand tailored to each holder and their preferences,
+          allowing each holder to have something unique to themselves and truly represents.
+           To acheive this goal we've implemented the following systems.</p>
+
+          <p>1. Gender Swap - Each Ongaku NFT will have the option to switch
+          between male or female.</p>
+
+          <p>2. Music Creation - The music behind every Ongaku can be customized and created by the
+          holder using our websites built-in system which will update the metadata of NFT
+          and change the song your Ongaku listens to.</p>
 `,
         },
         {
-          title: 'What is the supply?',
-          description: `The supply is TBA but will not be too much and not too little :).`,
+          title: 'Mint Information',
+          description: `More will be revealed in time...`,
         },
         {
-          title: 'Where can I find more information about Ongaku?',
-          description: `You can find more information on our twitter 
-          <a href=" https://twitter.com/OngakuOfficial" target="_blank"> 
-          https://twitter.com/OngakuOfficial</a>
-           or you can checkout the discord 
-          that we will be making ( TBA )
-`,
-        },
-        {
-          title:
-            'How do I get in touch for partnerships for the Ongaku collection?',
-          description: `Thank you for your interest! Make sure to DM us on twitter and we
-           will get back to you as soon as possible. `,
-        },
-        {
-          title: 'Will there be a discord?',
-          description: `Yes, we will be making a discord prior to the mint date. 
-          The exact date will be announced on our twitter.`,
-        },
-        {
-          title: 'What blockchain we Ongaku be deployed on?',
-          description: `Ongaku will be a Ethereum based project. We will be working 
-          with a ERC - 721A contract.`,
+          title: 'Contact Information',
+          description: ` <p>
+          Twitter Direct Messages :
+          <a href="https://twitter.com/OngakuOfficial" target="_blank"
+            >https://twitter.com/OngakuOfficial</a
+          >
+        </p>
+        <p>
+          General Support : support@ongaku.com <br />
+          Business Inquiries :info@ongaku.com
+        </p>`,
         },
       ],
       musicCards: [

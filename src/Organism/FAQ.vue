@@ -34,22 +34,31 @@ export default {
     return {
       faq: [
         {
-          title: 'Will there be a whitelist?',
-          description: `Yes, there will be a whitelist. We will make sure that people 
-          can guarantee their mint spot by showing their love and conviction for the project.
-`,
+          title: 'Inspiration',
+          description: `The vision of Ongaku was to create an environment which not only 
+          brings artists of Asia together, but also provide a space where holders can 
+          explore their creative mind`,
         },
         {
-          title: 'What is the supply?',
-          description: `The supply is TBA but will not be too much and not too little :).`,
+          title: 'Music',
+          description: `Each NFT will have music behind the animation which will be 
+          customizable to holders. In an effort to diversify the sound of Ongaku we've 
+          reached out to artists all over Asia each with their own unique style. Ranging 
+          from K-Pop music to Techno music.*`,
         },
         {
-          title: 'Where can I find more information about Ongaku?',
-          description: `You can find more information on our twitter 
-          <a href=" https://twitter.com/OngakuOfficial" target="_blank"> 
-          https://twitter.com/OngakuOfficial</a>
-           or you can checkout the discord 
-          that we will be making ( TBA )
+          title: 'Customization',
+          description: `
+          <p>*Each Ongaku can be hand tailored to each holder and their preferences, 
+          allowing each holder to have something unique to themselves and truly represents.
+           To acheive this goal we've implemented the following systems.</p>
+
+          <p>1. Gender Swap - Each Ongaku NFT will have the option to switch 
+          between male or female.</p>
+
+          <p>2. Music Creation - The music behind every Ongaku can be customized and created by the 
+          holder using our websites built-in system which will update the metadata of NFT 
+          and change the song your Ongaku listens to.</p>
 `,
         },
         {
