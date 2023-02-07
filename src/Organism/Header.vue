@@ -15,6 +15,9 @@
       >
         <MoleculeSiteMenu />
       </div> -->
+      <div class="fixed top-10 right-10 z-10">
+        <AtomIconTwitter link="https://twitter.com/OngakuOfficial" />
+      </div>
     </div>
   </header>
 </template>
