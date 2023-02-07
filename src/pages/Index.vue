@@ -168,8 +168,11 @@
           type="button"
           class="textXLarge pb-12 font-title font-bold text-a-green"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quaerat
-          officiis expedita cum aliquam iste ducimus.
+          Explore the your limitless potential.<br />
+          Endless customization<br />
+          Unlimited potential<br />
+          <br />
+          <p>Ongaku</p>
         </AtomAnimate>
       </div>
       <div
