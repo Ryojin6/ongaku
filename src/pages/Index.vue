@@ -359,15 +359,15 @@ export default {
       ],
       musicCards: [
         {
-          title: 'First song',
+          title: 'Sunset Valley',
           song: '/m1.mp3',
         },
         {
-          title: 'Second Song',
+          title: 'Empower',
           song: '/m2.mp3',
         },
         {
-          title: 'Third Song',
+          title: 'Street Side',
           song: '/m3.mp3',
         },
       ],
