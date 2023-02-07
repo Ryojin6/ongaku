@@ -1,11 +1,11 @@
 <template>
   <TemplateDefault class="relative z-10 bg-a-yellow text-white" homepage>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] pt-24 md:grid-cols-2 md:pt-0"
+      class="relative grid pt-24 md:h-screen md:min-h-[1000px] md:grid-cols-2 md:pt-0"
       full-width
     >
       <div
-        class="relative flex h-full w-full flex-col items-center justify-center px-10"
+        class="relative flex h-full min-h-[500px] w-full flex-col items-center justify-center px-10"
       >
         <div
           class="relative z-10 font-title text-7xl font-bold text-a-charcoal 2xl:text-8xl 3xl:text-9xl"
@@ -19,7 +19,7 @@
       </div>
       <div class="relative z-50 flex items-center justify-end bg-a-charcoal">
         <AtomAnimate
-          class="relative z-50 flex w-full flex-col items-end space-y-4 pt-4"
+          class="relative z-50 flex w-full flex-col items-end space-y-4 py-10"
         >
           <button
             type="button"
@@ -103,24 +103,23 @@
       </audio>
     </div> -->
     <div
-      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
+      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
-        class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 text-a-charcoal xl:px-12 3xl:space-y-10"
+        class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 py-10 text-a-charcoal xl:px-12 3xl:space-y-10"
       >
+        <!-- <audio ref="audio1" :src="audio1"></audio>
+        <audio ref="audio2" :src="audio2"></audio>
+        <button @click="toggleAudio('audio1')">Toggle Audio 1</button>
+        <button @click="toggleAudio('audio2')">Toggle Audio 2</button> -->
         <div
           v-for="i in musicCards"
           :key="i.title"
           type="button"
           class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 text-center font-title text-4xl font-bold hover:bg-a-green xl:text-5xl 2xl:text-6xl 3xl:text-7xl"
           :class="{ 'bg-a-green': activeMusic === i.title }"
-          @click.prevent="
-            playSound(
-              'http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3',
-            ),
-              (activeMusic = i.title)
-          "
+          @click.prevent="playSound(i.song), (activeMusic = i.title)"
         >
           <div class="mt-6 h-10 w-10">
             <img src="/playbutton.svg" alt="" />
@@ -165,7 +164,7 @@
       </div>
     </div>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
+      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
@@ -186,7 +185,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/1.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -196,7 +195,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/2.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -208,7 +207,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/3.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -218,7 +217,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/4.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -231,7 +230,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/5.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -241,7 +240,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/6.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -253,7 +252,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/7.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -263,7 +262,7 @@
           <kinesis-container>
             <kinesis-element :strength="10" type="depth">
               <g-image
-                src="/example.png"
+                src="/8.jpg"
                 immediate
                 alt=""
                 class="w-full rounded-xl shadow-2xl"
@@ -274,17 +273,17 @@
       </div>
     </AtomSection>
     <AtomSection
-      class="relative grid h-screen min-h-[1000px] md:grid-cols-2"
+      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
-        class="relative flex h-full w-full flex-col items-start justify-start space-y-6 bg-white px-4 pt-10 text-a-charcoal xl:px-12 3xl:space-y-10"
+        class="relative flex h-full w-full flex-col items-start justify-start space-y-6 bg-white px-4 pt-10 text-a-charcoal 3xl:space-y-10"
       >
         <div
           v-for="card in faq"
           :key="card.title"
           type="button"
-          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 font-title text-3xl font-bold hover:bg-a-green xl:text-3xl"
+          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 font-title text-3xl font-semibold hover:bg-a-green xl:text-3xl"
           :class="{ 'bg-a-yellow': activeFaq === card.title }"
           @click="activeFaq = card.title"
         >
@@ -298,7 +297,6 @@
           v-for="(card, cardName) in faq"
           :id="`ongaku-${cardName}`"
           :key="cardName"
-          class="absolute top-10"
         >
           <div
             v-show="card.title === activeFaq"
@@ -325,53 +323,59 @@ export default {
       selectedPortfolio: '',
       popup: false,
       activeSound: 'false',
-      activeFaq:
-        'Lorem ipsumesometsama Lorem ipsumes ometsama Lorem ipsumesometsama',
+      audio1: '/m1.mp3',
+      audio2: '/m2.mp3',
+      activeFaq: 'Where can I find more information about Ongaku?',
       activeMusic: 'First one ipsum',
       faq: [
         {
-          title:
-            'Lorem ipsumesometsama Lorem ipsumes ometsama Lorem ipsumesometsama',
-          description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
-          aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
-           deserunt?`,
+          title: 'Will there be a whitelist?',
+          description: `Yes, there will be a whitelist. We will make sure that people 
+          can guarantee their mint spot by showing their love and conviction for the project.
+`,
+        },
+        {
+          title: 'What is the supply?',
+          description: `The supply is TBA but will not be too much and not too little :).`,
+        },
+        {
+          title: 'Where can I find more information about Ongaku?',
+          description: `You can find more information on our twitter 
+          <a href=" https://twitter.com/OngakuOfficial" target="_blank"> 
+          https://twitter.com/OngakuOfficial</a>
+           or you can checkout the discord 
+          that we will be making ( TBA )
+`,
         },
         {
           title:
-            'Lorem ipsumesometsama Lorem ipsumesome tsama Lorem ipsumesometsama2',
-          description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
-          aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
-           deserunt?`,
+            'How do I get in touch for partnerships for the Ongaku collection?',
+          description: `Thank you for your interest! Make sure to DM us on twitter and we
+           will get back to you as soon as possible. `,
         },
         {
-          title:
-            'Lorem ipsumesometsama Lorem ipsum esome tsama Lorem ipsumesometsama3',
-          description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Maxime sapiente ipsa ea inventore consequatur, at sed cum ex voluptate 
-          aperiam ipsum dolorum aliquam quos repellendus delectus ullam nihil hic
-           deserunt?`,
+          title: 'Will there be a discord?',
+          description: `Yes, we will be making a discord prior to the mint date. 
+          The exact date will be announced on our twitter.`,
+        },
+        {
+          title: 'What blockchain we Ongaku be deployed on?',
+          description: `Ongaku will be a Ethereum based project. We will be working 
+          with a ERC - 721A contract.`,
         },
       ],
       musicCards: [
         {
-          title: 'First one ipsum',
+          title: 'First song',
+          song: '/m1.mp3',
         },
         {
-          title: 'Lorem ipsum',
+          title: 'Second Song',
+          song: '/m2.mp3',
         },
         {
-          title: 'Lorem ipsum2',
-        },
-        {
-          title: 'Lorem ipsum3',
-        },
-        {
-          title: 'Lorem ipsum4',
-        },
-        {
-          title: 'Lorem ipsum5',
+          title: 'Third Song',
+          song: '/m3.mp3',
         },
       ],
       cardInfo: [
@@ -402,11 +406,20 @@ export default {
       ],
     };
   },
+
   methods: {
-    playSound(sound) {
-      if (sound) {
-        let audio = new Audio(sound);
-        audio.play();
+    toggleAudio(audio) {
+      const audioEl = this.$refs[audio];
+      if (audio === 'audio1') {
+        this.playingAudio1 = !this.playingAudio1;
+      } else if (audio === 'audio2') {
+        this.playingAudio2 = !this.playingAudio2;
+      }
+      if (this.playingAudio1 || this.playingAudio2) {
+        audioEl.play();
+      } else {
+        audioEl.pause();
+        audioEl.currentTime = 0;
       }
     },
   },
@@ -414,6 +427,9 @@ export default {
 </script>
 
 <style>
+.prose a {
+  @apply text-white;
+}
 .main:after {
   animation: grain 8s steps(10) infinite;
   background-image: url(/grain.png);
