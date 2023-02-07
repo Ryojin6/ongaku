@@ -1,7 +1,7 @@
 import '~/main.css';
 import '~/transitions.css';
+import VueAudio from '~/vue-audio-better';
 import aos from './aos';
-import VueAudio from 'vue-audio-better';
 
 const SCROLL_OFFSET = 10;
 
