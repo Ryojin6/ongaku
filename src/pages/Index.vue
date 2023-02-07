@@ -96,12 +96,9 @@
         </AtomAnimate>
       </div>
     </AtomSection>
-    <!-- <div class="fixed bottom-10 right-10">
-      <audio controls autoplay>
-        <source src="/1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div> -->
+    <div class="fixed bottom-10 right-10 z-20">
+      <mini-audio :audio-source="selectedMusic" />
+    </div>
     <div
       class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
       full-width
@@ -109,17 +106,13 @@
       <div
         class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 py-10 text-a-charcoal xl:px-12 3xl:space-y-10"
       >
-        <!-- <audio ref="audio1" :src="audio1"></audio>
-        <audio ref="audio2" :src="audio2"></audio>
-        <button @click="toggleAudio('audio1')">Toggle Audio 1</button>
-        <button @click="toggleAudio('audio2')">Toggle Audio 2</button> -->
         <div
           v-for="i in musicCards"
           :key="i.title"
           type="button"
           class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 text-center font-title text-4xl font-bold hover:bg-a-green xl:text-5xl 2xl:text-6xl 3xl:text-7xl"
-          :class="{ 'bg-a-green': activeMusic === i.title }"
-          @click.prevent="playSound(i.song), (activeMusic = i.title)"
+          :class="{ 'bg-a-green': selectedMusic === i.song }"
+          @click.prevent="selectedMusic = i.song"
         >
           <div class="mt-6 h-10 w-10">
             <img src="/playbutton.svg" alt="" />
@@ -323,10 +316,10 @@ export default {
       selectedPortfolio: '',
       popup: false,
       activeSound: 'false',
-      audio1: '/m1.mp3',
-      audio2: '/m2.mp3',
+      isPlaying: false,
       activeFaq: 'Where can I find more information about Ongaku?',
       activeMusic: 'First one ipsum',
+      selectedMusic: '/m1.mp3',
       faq: [
         {
           title: 'Will there be a whitelist?',
@@ -408,18 +401,10 @@ export default {
   },
 
   methods: {
-    toggleAudio(audio) {
-      const audioEl = this.$refs[audio];
-      if (audio === 'audio1') {
-        this.playingAudio1 = !this.playingAudio1;
-      } else if (audio === 'audio2') {
-        this.playingAudio2 = !this.playingAudio2;
-      }
-      if (this.playingAudio1 || this.playingAudio2) {
-        audioEl.play();
-      } else {
-        audioEl.pause();
-        audioEl.currentTime = 0;
+    playSound(sound) {
+      if (sound) {
+        const audio = new Audio(sound);
+        audio.play();
       }
     },
   },

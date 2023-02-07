@@ -1,11 +1,13 @@
 import '~/main.css';
 import '~/transitions.css';
 import aos from './aos';
+import VueAudio from 'vue-audio-better';
 
 const SCROLL_OFFSET = 10;
 
 export default function main(Vue, { head }) {
   Vue.directive('aos', aos);
+  Vue.use(VueAudio);
 
   const files = require.context('./', true, /\.vue$/i);
 
