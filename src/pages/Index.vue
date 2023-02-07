@@ -13,8 +13,9 @@
           The <span class="text-a-red">#1</span> Music NFT in 2023
         </div>
         <div class="textMedium pt-10 text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          id sed provident repellat.
+          Ongaku is about connecting music to Web 3. The purpose and goal of
+          Ongaku is to empower people to be as musically creative as they can
+          with their own personal NFT.
         </div>
       </div>
       <div class="relative z-50 flex items-center justify-end bg-a-charcoal">
@@ -46,7 +47,7 @@
               )
             "
             type="button"
-            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 -translate-y-0 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
+            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
           />
           <button
             @click.prevent="

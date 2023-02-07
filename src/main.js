@@ -67,11 +67,15 @@ export default function main(Vue, { head }) {
     },
     {
       name: 'og:description',
-      content: ` Ongaku description`,
+      content: ` Ongaku |   Ongaku is about connecting music to Web 3. The purpose and goal of
+          Ongaku is to empower people to be as musically creative as they can
+          with their own personal NFT.`,
     },
     {
       name: 'twitter:card',
-      content: ` Ongaku description`,
+      content: ` Ongaku |   Ongaku is about connecting music to Web 3. The purpose and goal of
+          Ongaku is to empower people to be as musically creative as they can
+          with their own personal NFT.`,
     },
   );
 
