@@ -168,9 +168,11 @@
           type="button"
           class="textXLarge pb-12 font-title font-bold text-a-green"
         >
-          Explore the your limitless potential.<br />
-          Endless customization<br />
-          Unlimited potential<br />
+          <ul>
+            <li>Explore the your limitless potential.</li>
+            <li>Endless customization.</li>
+            <li>Unlimited potential.</li>
+          </ul>
           <br />
           <p>Ongaku</p>
         </AtomAnimate>
@@ -280,7 +282,7 @@
           v-for="card in faq"
           :key="card.title"
           type="button"
-          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-6 pt-4 font-title text-3xl font-semibold hover:bg-a-green xl:text-3xl"
+          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-6 pt-4 font-title text-3xl font-semibold hover:bg-a-green xl:text-4xl"
           :class="{ 'bg-a-yellow': activeFaq === card.title }"
           @click="activeFaq = card.title"
         >
@@ -290,6 +292,7 @@
       <div
         class="relative flex h-full w-full flex-col space-y-10 bg-a-charcoal p-10"
       >
+        <div class="font-title text-2xl">Answer</div>
         <div
           v-for="(card, cardName) in faq"
           :id="`ongaku-${cardName}`"
@@ -321,7 +324,7 @@ export default {
       popup: false,
       activeSound: 'false',
       isPlaying: false,
-      activeFaq: 'Where can I find more information about Ongaku?',
+      activeFaq: 'Inspiration',
       activeMusic: 'First one ipsum',
       selectedMusic: '/m1.mp3',
       faq: [
@@ -329,19 +332,19 @@ export default {
           title: 'Inspiration',
           description: `The vision of Ongaku was to create an environment which not only
           brings artists of Asia together, but also provide a space where holders can
-          explore their creative mind`,
+          explore their creative mind.`,
         },
         {
           title: 'Music',
           description: `Each NFT will have music behind the animation which will be
           customizable to holders. In an effort to diversify the sound of Ongaku we've
           reached out to artists all over Asia each with their own unique style. Ranging
-          from K-Pop music to Techno music.*`,
+          from K-Pop music to Techno music.`,
         },
         {
           title: 'Customization',
           description: `
-          <p>*Each Ongaku can be hand tailored to each holder and their preferences,
+          <p>Each Ongaku can be hand tailored to each holder and their preferences,
           allowing each holder to have something unique to themselves and truly represents.
            To acheive this goal we've implemented the following systems.</p>
 
