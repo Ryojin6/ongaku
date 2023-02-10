@@ -4,6 +4,10 @@
       class="relative grid pt-24 md:h-screen md:min-h-[1000px] md:grid-cols-2 md:pt-0"
       full-width
     >
+      <div class="scroll-down">
+        <div class="scroll-down-text">SCROLL DOWN</div>
+        <div class="scroll-down-bar"></div>
+      </div>
       <div
         class="relative flex h-full min-h-[500px] w-full flex-col items-center justify-center px-10"
       >
@@ -18,167 +22,9 @@
           with their own personal NFT.
         </div>
       </div>
-      <div class="relative z-50 flex items-center justify-end bg-a-charcoal">
-        <AtomAnimate
-          class="relative z-50 flex w-full flex-col items-end space-y-4 py-10"
-        >
-          <button
-            type="button"
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3',
-              )
-            "
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-navy hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-green hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition absolute right-0 top-1/2 z-20 h-24 w-6/12 translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-pink hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-yellow hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-blue hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="
-              playSound(
-                'http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3',
-              )
-            "
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-red hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-        </AtomAnimate>
-      </div>
-    </AtomSection>
-    <div class="fixed bottom-10 right-10 z-20">
-      <mini-audio :audio-source="selectedMusic" />
-    </div>
-    <div
-      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
-      full-width
-    >
+
       <div
-        class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 py-10 text-a-charcoal xl:px-12 3xl:space-y-10"
-      >
-        <div
-          v-for="i in musicCards"
-          :key="i.title"
-          type="button"
-          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 text-center font-title text-4xl font-bold hover:bg-a-green xl:text-5xl 2xl:text-6xl 3xl:text-7xl"
-          :class="{ 'bg-a-green': selectedMusic === i.song }"
-          @click.prevent="selectedMusic = i.song"
-        >
-          <div class="mt-6 h-10 w-10">
-            <img src="/playbutton.svg" alt="" />
-          </div>
-          <div class="w-full">{{ i.title }}</div>
-        </div>
-      </div>
-      <div
-        class="relative flex h-full w-full flex-col items-center justify-center bg-a-blue"
-      >
-        <div class="flex h-full w-full items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
-            <rect
-              class="eq-bar eq-bar--1"
-              :class="{ start: activeSound }"
-              x="4"
-              y="4"
-              width="3.7"
-              height="8"
-              rx="2"
-            />
-            <rect
-              class="eq-bar eq-bar--2"
-              :class="{ start: activeSound }"
-              x="10.2"
-              y="4"
-              rx="2"
-              width="3.7"
-              height="16"
-            />
-            <rect
-              class="eq-bar eq-bar--3"
-              :class="{ start: activeSound }"
-              x="16.3"
-              y="4"
-              rx="2"
-              width="3.7"
-              height="11"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <AtomSection
-      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
-      full-width
-    >
-      <div
-        class="relative flex h-full w-full flex-col items-start justify-start space-y-6 bg-a-charcoal px-4 pt-10 text-a-charcoal xl:px-12 3xl:space-y-10"
-      >
-        <AtomAnimate
-          type="button"
-          class="textXLarge pb-12 font-title font-bold text-a-green"
-        >
-          <ul>
-            <li>Explore the your limitless potential.</li>
-            <li>Endless customization.</li>
-            <li>Unlimited potential.</li>
-          </ul>
-          <br />
-          <p>Ongaku</p>
-        </AtomAnimate>
-      </div>
-      <div
-        class="relative flex h-full w-full flex-col justify-center space-y-10 bg-a-green p-10"
+        class="relative flex h-full w-full flex-col justify-center space-y-10 bg-a-charcoal p-10"
       >
         <div class="grid gap-10 md:w-10/12 md:grid-cols-2">
           <kinesis-container>
@@ -269,6 +115,133 @@
             </kinesis-element>
           </kinesis-container>
         </div>
+      </div>
+    </AtomSection>
+    <div class="fixed bottom-10 right-10 z-20">
+      <mini-audio :audio-source="selectedMusic" autoplay />
+    </div>
+    <div
+      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
+      full-width
+    >
+      <div
+        class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 py-10 text-a-charcoal xl:px-12 3xl:space-y-10"
+      >
+        <div
+          v-for="i in musicCards"
+          :key="i.title"
+          type="button"
+          class="flex cursor-pointer items-center space-x-2 rounded-xl px-6 pb-10 pt-4 text-center font-title text-4xl font-bold hover:bg-a-green xl:text-5xl 2xl:text-6xl 3xl:text-7xl"
+          :class="{ 'bg-a-green': selectedMusic === i.song }"
+          @click.prevent="selectedMusic = i.song"
+        >
+          <div class="mt-6 h-10 w-10">
+            <img src="/playbutton.svg" alt="" />
+          </div>
+          <div class="w-full">{{ i.title }}</div>
+        </div>
+      </div>
+      <div
+        class="relative flex h-full w-full flex-col items-center justify-center bg-a-blue"
+      >
+        <div class="flex h-full w-full items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+            <rect
+              class="eq-bar eq-bar--1"
+              :class="{ start: activeSound }"
+              x="4"
+              y="4"
+              width="3.7"
+              height="8"
+              rx="2"
+            />
+            <rect
+              class="eq-bar eq-bar--2"
+              :class="{ start: activeSound }"
+              x="10.2"
+              y="4"
+              rx="2"
+              width="3.7"
+              height="16"
+            />
+            <rect
+              class="eq-bar eq-bar--3"
+              :class="{ start: activeSound }"
+              x="16.3"
+              y="4"
+              rx="2"
+              width="3.7"
+              height="11"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <AtomSection
+      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
+      full-width
+    >
+      <div
+        class="relative flex h-full w-full flex-col items-start justify-start space-y-6 bg-a-charcoal px-4 pt-10 text-a-charcoal xl:px-12 3xl:space-y-10"
+      >
+        <AtomAnimate
+          type="button"
+          class="textXLarge pb-12 font-title font-bold text-a-green"
+        >
+          <ul>
+            <li>Explore the your limitless potential.</li>
+            <li>Endless customization.</li>
+            <li>Unlimited potential.</li>
+          </ul>
+          <br />
+          <p>Ongaku</p>
+        </AtomAnimate>
+      </div>
+      <div class="relative z-50 flex items-center justify-end bg-a-green">
+        <AtomAnimate
+          class="relative z-50 flex w-full flex-col items-end space-y-4 py-10"
+        >
+          <button
+            type="button"
+            @click.prevent="playSound('/mi.mp3')"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-a-navy hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/re.mp3')"
+            type="button"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-white hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/si.mp3')"
+            type="button"
+            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/sol.mp3')"
+            type="button"
+            class="custom-transition absolute right-0 top-1/2 z-20 h-24 w-6/12 translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/re.mp3')"
+            type="button"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-a-pink hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/mi.mp3')"
+            type="button"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-a-yellow hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/sol.mp3')"
+            type="button"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-a-blue hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+          <button
+            @click.prevent="playSound('/re.mp3')"
+            type="button"
+            class="custom-transition h-24 w-10/12 rounded-xl bg-a-red hover:scale-110 2xl:h-28 3xl:h-32"
+          />
+        </AtomAnimate>
       </div>
     </AtomSection>
     <AtomSection
@@ -542,6 +515,66 @@ export default {
 
   100% {
     height: 16px;
+  }
+}
+.scroll-down {
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+.scroll-down-text {
+  @apply text-white;
+  font-weight: bold;
+}
+.scroll-down-bar {
+  @apply bg-white;
+  bottom: 0;
+  display: inline-block;
+  height: 65px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 3px;
+}
+.scroll-down-bar::before {
+  animation: scrollBall 1.5s ease-in-out infinite;
+  @apply bg-a-red;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 10px;
+  left: calc(50% - 5px);
+  position: absolute;
+  top: 10px;
+  width: 10px;
+}
+@-moz-keyframes scrollBall {
+  40%,
+  60% {
+    transform: translateY(32px);
+  }
+}
+@-webkit-keyframes scrollBall {
+  40%,
+  60% {
+    transform: translateY(32px);
+  }
+}
+@-o-keyframes scrollBall {
+  40%,
+  60% {
+    transform: translateY(32px);
+  }
+}
+@keyframes scrollBall {
+  40%,
+  60% {
+    transform: translateY(32px);
   }
 }
 </style>
