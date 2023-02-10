@@ -15,8 +15,12 @@
       >
         <MoleculeSiteMenu />
       </div> -->
-      <div class="fixed top-10 right-10 z-10">
+      <div class="fixed top-10 right-10 z-10 flex items-center space-x-4">
         <AtomIconTwitter link="https://twitter.com/OngakuOfficial" />
+        <AtomIconMedium
+          link="https://medium.com/@ongakuofficialnft/ongaku-ebee25654d8b
+"
+        />
       </div>
     </div>
   </header>
