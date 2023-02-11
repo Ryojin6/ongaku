@@ -1,12 +1,12 @@
 <template>
   <TemplateDefault class="relative z-10 bg-a-yellow text-white" homepage>
     <AtomSection
-      class="relative grid pt-24 md:h-screen md:min-h-[1000px] md:grid-cols-2 md:pt-0"
+      class="relative grid pt-24 md:min-h-[1000px] md:grid-cols-2 md:pt-0"
       full-width
     >
       <div class="scroll-down">
         <div class="scroll-down-text">SCROLL DOWN</div>
-        <div class="scroll-down-bar"></div>
+        <div class="scroll-down-bar" />
       </div>
       <div
         class="relative flex h-full min-h-[500px] w-full flex-col items-center justify-center px-10"
@@ -120,10 +120,7 @@
     <div class="fixed bottom-10 right-10 z-20">
       <mini-audio :audio-source="selectedMusic" autoplay />
     </div>
-    <div
-      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
-      full-width
-    >
+    <div class="relative grid md:min-h-[1000px] md:grid-cols-2" full-width>
       <div
         class="relative flex h-full w-full flex-col items-start justify-center space-y-6 bg-white px-4 py-10 text-a-charcoal xl:px-12 3xl:space-y-10"
       >
@@ -178,7 +175,7 @@
       </div>
     </div>
     <AtomSection
-      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
+      class="relative grid md:min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
@@ -245,7 +242,7 @@
       </div>
     </AtomSection>
     <AtomSection
-      class="relative grid md:h-screen md:min-h-[1000px] md:grid-cols-2"
+      class="relative grid md:min-h-[1000px] md:grid-cols-2"
       full-width
     >
       <div
