@@ -24,7 +24,7 @@
       </div>
 
       <div
-        class="relative flex h-full w-full flex-col justify-center space-y-10 bg-a-charcoal p-10"
+        class="relative flex h-full w-full flex-col justify-center space-y-10 bg-a-charcoal p-10 md:p-20"
       >
         <div class="grid gap-10 md:w-10/12 md:grid-cols-2">
           <kinesis-container>

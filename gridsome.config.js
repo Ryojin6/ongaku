@@ -24,7 +24,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-gtm',
       options: {
-        id: '',
+        id: 'GTM-MVPGRVL',
         enabled: true,
         debug: true,
       },
