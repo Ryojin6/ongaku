@@ -16,7 +16,7 @@
         >
           The <span class="text-a-red">#1</span> Music NFT in 2023
         </div>
-        <div class="textMedium pt-10 text-black">
+        <div class="textMedium pt-10 text-a-charcoal">
           Ongaku is about connecting music to Web 3. The purpose and goal of
           Ongaku is to empower people to be as musically creative as they can
           with their own personal NFT.
@@ -198,46 +198,123 @@
         <AtomAnimate
           class="relative z-50 flex w-full flex-col items-end space-y-4 py-10"
         >
-          <button
-            type="button"
-            @click.prevent="playSound('/mi.mp3')"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-navy hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/re.mp3')"
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-white hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/si.mp3')"
-            type="button"
-            class="custom-transition absolute right-0 bottom-1/2 z-20 h-24 w-6/12 -translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/sol.mp3')"
-            type="button"
-            class="custom-transition absolute right-0 top-1/2 z-20 h-24 w-6/12 translate-y-16 rounded-xl bg-a-charcoal hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/re.mp3')"
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-pink hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/mi.mp3')"
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-yellow hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/sol.mp3')"
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-blue hover:scale-110 2xl:h-28 3xl:h-32"
-          />
-          <button
-            @click.prevent="playSound('/re.mp3')"
-            type="button"
-            class="custom-transition h-24 w-10/12 rounded-xl bg-a-red hover:scale-110 2xl:h-28 3xl:h-32"
-          />
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              type="button"
+              @mouseover="playSound('/mi.mp3')"
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-navy 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              IS
+            </div>
+          </div>
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              @mouseover="playSound('/re.mp3')"
+              type="button"
+              class="h-24 w-full rounded-xl rounded-r-none bg-white 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              LIFE
+            </div>
+          </div>
+          <div
+            class="custom-transition group absolute right-0 bottom-1/2 z-20 w-6/12 -translate-y-16 overflow-hidden hover:scale-110"
+          >
+            <button
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-charcoal 2xl:h-28 3xl:h-32"
+              @mouseover="playSound('/si1.mp3')"
+              type="button"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
+            >
+              OF
+            </div>
+          </div>
+
+          <div
+            class="custom-transition group absolute right-0 bottom-6 z-20 w-6/12 -translate-y-48 overflow-hidden hover:scale-110"
+          >
+            <button
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-charcoal 2xl:h-28 3xl:h-32"
+              @mouseover="playSound('/sol.mp3')"
+              type="button"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
+            >
+              THE
+            </div>
+          </div>
+
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              @mouseover="playSound('/si.mp3')"
+              type="button"
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-pink 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-20 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              RHYTHM
+            </div>
+          </div>
+
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              @mouseover="playSound('/mi.mp3')"
+              type="button"
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-yellow 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              .
+            </div>
+          </div>
+
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              @mouseover="playSound('/si.mp3')"
+              type="button"
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-blue 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              MY
+            </div>
+          </div>
+
+          <div
+            class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
+          >
+            <button
+              @mouseover="playSound('/si.mp3')"
+              type="button"
+              class="h-24 w-full rounded-xl rounded-r-none bg-a-red 2xl:h-28 3xl:h-32"
+            />
+            <div
+              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
+            >
+              THIS
+            </div>
+          </div>
         </AtomAnimate>
       </div>
     </AtomSection>
