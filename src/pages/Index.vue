@@ -209,7 +209,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
             >
-              IS
+              is
             </div>
           </div>
           <div
@@ -223,7 +223,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
             >
-              LIFE
+              life
             </div>
           </div>
           <div
@@ -237,7 +237,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
             >
-              OF
+              of
             </div>
           </div>
 
@@ -252,7 +252,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
             >
-              THE
+              the
             </div>
           </div>
 
@@ -267,7 +267,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-20 text-xl font-bold text-a-charcoal group-hover:left-10"
             >
-              RHYTHM
+              rhythm
             </div>
           </div>
 
@@ -297,7 +297,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
             >
-              MY
+              my
             </div>
           </div>
 
@@ -312,7 +312,7 @@
             <div
               class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
             >
-              THIS
+              this
             </div>
           </div>
         </AtomAnimate>
