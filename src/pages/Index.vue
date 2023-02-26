@@ -206,11 +206,6 @@
               @mouseover="playSound('/mi.mp3')"
               class="h-24 w-full rounded-xl rounded-r-none bg-a-navy 2xl:h-28 3xl:h-32"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
-            >
-              is
-            </div>
           </div>
           <div
             class="custom-transition group relative flex w-10/12 justify-end overflow-hidden uppercase hover:scale-110"
@@ -220,11 +215,6 @@
               type="button"
               class="h-24 w-full rounded-xl rounded-r-none bg-white 2xl:h-28 3xl:h-32"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
-            >
-              life
-            </div>
           </div>
           <div
             class="custom-transition group absolute right-0 bottom-1/2 z-20 w-6/12 -translate-y-16 overflow-hidden hover:scale-110"
@@ -234,11 +224,6 @@
               @mouseover="playSound('/si1.mp3')"
               type="button"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
-            >
-              of
-            </div>
           </div>
 
           <div
@@ -249,11 +234,6 @@
               @mouseover="playSound('/sol.mp3')"
               type="button"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-yellow group-hover:left-10"
-            >
-              the
-            </div>
           </div>
 
           <div
@@ -294,11 +274,6 @@
               type="button"
               class="h-24 w-full rounded-xl rounded-r-none bg-a-blue 2xl:h-28 3xl:h-32"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
-            >
-              my
-            </div>
           </div>
 
           <div
@@ -309,11 +284,6 @@
               type="button"
               class="h-24 w-full rounded-xl rounded-r-none bg-a-red 2xl:h-28 3xl:h-32"
             />
-            <div
-              class="pin-y-center custom-transition absolute -left-14 text-xl font-bold text-a-charcoal group-hover:left-10"
-            >
-              this
-            </div>
           </div>
         </AtomAnimate>
       </div>
@@ -416,8 +386,10 @@ export default {
           >
         </p>
         <p>
-          General Support : support@ongaku.com <br />
-          Business Inquiries :info@ongaku.com
+          General Support : support@ongaku.xyz <br />
+          Business Inquiries : info@ongaku.xyz
+          
+
         </p>`,
         },
       ],
