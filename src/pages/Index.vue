@@ -21,6 +21,14 @@
           Ongaku is to empower people to be as musically creative as they can
           with their own personal NFT.
         </div>
+        <div class="mt-10 flex w-full justify-start">
+          <a
+            href="https://app.ongakunft.xyz"
+            target="_blank"
+            class="flex cursor-pointer space-x-2 rounded-xl bg-a-green px-6 pb-6 pt-4 font-title text-3xl font-semibold hover:bg-a-pink xl:text-4xl"
+            >Mint Now</a
+          >
+        </div>
       </div>
 
       <div
